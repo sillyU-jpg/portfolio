@@ -1,6 +1,7 @@
 import React from 'react'
 import { Spotlight } from './ui/Spotlight'
 import { TextHoverEffect } from './ui/text-hover-effect';
+import { TextGenerateEffect } from './ui/text-generate-effect';
 
 const Hero = () => {
   return (
@@ -10,24 +11,23 @@ const Hero = () => {
       <Spotlight className='top-28 left-80 h-[80vh] w-[50vw]' fill='blue'/>
 </div>
 <div className="h-screen w-full dark:bg-black-100 bg-white  dark:bg-grid-white/[0.03]
-       bg-grid-black/[0.2] flex items-center justify-center absolute top-0 left-0 ">
-      {/* Radial gradient for the container to give a faded look */}
+       bg-grid-black/[0.2] flex items-center text-center justify-center absolute top-0 left-0 ">
+
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"/>
     </div>
   
     <div className='flex justify-center relative my-20'> 
-    
+
       <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
+      <p className='text-center font-extrabold h-0'> Hey welcome to my website, im... </p>
       <TextHoverEffect 
         className="text-center text-[50px] md:text-2xl lg:text-6xl overflow-auto"
         text="Nikolai King"
         />
-        <h2 className='uppercase tracking-widest text-xs
-         text-center text-blue-100 max-w-80'>
-      Welcome to my website
-        </h2>
-      <p className=''> Hi, Im Nikolai. Web developer, Designer and Programmer based out of Auckland,NZ
-       </p>
+     <TextGenerateEffect 
+className='text-center font-bold top-0'
+words='Web developer, Designer and Programmer based out of Auckland, NZ.'
+     />
       </div>
     </div>
 </div> 
